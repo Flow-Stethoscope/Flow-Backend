@@ -1,3 +1,8 @@
+# ignore large files
+datasets/
+model_saves/
+tmp/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
