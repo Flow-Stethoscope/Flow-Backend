@@ -61,7 +61,7 @@ def plot_history(history):
 
 
 if __name__ == "__main__":
-    EPOCHS = 15
+    EPOCHS = 30
     BATCH_SIZE = 2
     LEARNING_RATE = 1e-6
 
@@ -84,9 +84,11 @@ if __name__ == "__main__":
     # file location for saved model weights
     # best so far: 3513226_epochs_15-batch_size_2-lr_1e-06
     # new best: 3515192_epochs_15-batch_size_2-lr_1e-06
+    # 3520179_epochs_15-batch_size_2-lr_1e-06
+    # 3523832_epochs_15-batch_size_2-lr_1e-06
     model_weights_save = Path("./model_saves/")
     model_full_save = Path(
-        "./model_saves/3515192_epochs_15-batch_size_2-lr_1e-06/full_save"
+        "./model_saves/3523832_epochs_15-batch_size_2-lr_1e-06/full_save"
     )
 
     # load in data

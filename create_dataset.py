@@ -4,12 +4,7 @@ import librosa
 import librosa.display
 
 from scipy.signal import butter, lfilter
-import numpy as np
-import sklearn
-import pandas as pd
 import math
-
-import matplotlib.pyplot as plt
 
 from pathlib import Path
 import csv

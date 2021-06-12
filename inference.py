@@ -16,15 +16,10 @@ class Inference:
         self.model.summary()
 
     def predict(self, byte_list, threshold=0.01):
-        # TODO figure out why x shape first dim is double what it should be
-        #  (ex: 35 sec clip divided into 5 sec clips produces 14 in first dim)
         x = self.preprocess(byte_list)
-        print("x shape", x.shape)
 
         pred = self.model.predict_on_batch(x)
-        print("pred shape", pred.shape)
         avg_pred = np.mean(pred)
-        print("avg_pred", avg_pred)
 
         if 0.5 - threshold <= avg_pred <= 0.5 + threshold:
             return "unsure"
@@ -47,13 +42,15 @@ class Inference:
 
 if __name__ == "__main__":
     model_full_save = Path(
-        "./model_saves/3515192_epochs_15-batch_size_2-lr_1e-06/full_save"
+        "./model_saves/3523832_epochs_15-batch_size_2-lr_1e-06/full_save"
     )
     test_audio_path = Path(
-        "./datasets/classification-heart-sounds-physionet/training-a/a0001.wav"
+        "./datasets/classification-heart-sounds-physionet/training-a/a0004.wav"
     )
 
-    inference = Inference(model_full_save, 1000)
+    inference = Inference(
+        model_full_save, 2000
+    )  # for testing, dataset has 2kHz sample rate
 
     audio_np, sr = librosa.load(test_audio_path, sr=None)
     print(inference.predict(audio_np))
