@@ -3,12 +3,15 @@ import json
 import pymongo
 from flask import Flask, request, redirect
 import bcrypt
+from api import firebase
 
+from inference import Inference
 from schemas import User
 from schemas import Recording
 
 client = pymongo.MongoClient("mongodb+srv://admin:mAsSeYhAcKeZ2096@flow-db.wcavd.mongodb.net/test")
 db = client["flow"]
+inference = Inference()
 
 # files = request.files
 
@@ -67,12 +70,23 @@ def user(username):
     return json.loads(json.dumps(user_info))
 
 
+# client sends bytes to backend
 @app.route('/send_recording', methods=['POST'])
 def send_recording():
     recording = request.form.to_dict()
+    bytes = recording["recording"]
+
+    classification = inference.predict(bytes)
+    path = inference.get_wav(bytes)
+    url = firebase.uploadFile(path)
+    inference.delete_wav(path)
     # if Recording.recording.is_valid(recording):
     if True:
-        rec_id = db["recordings"].insert_one(recording).inserted_id
+        rec_id = db["recordings"].insert_one({
+            "url": url,
+            "username": recording["username"],
+            "classification": classification
+        }).inserted_id
         db.patients.update(
             {
                 "username": recording["username"]
@@ -86,34 +100,5 @@ def send_recording():
                 }
             }
         )
-        # db["patients"].update(
-        #     {"username": recording["username"]},
-        #     {"$push": recording}
-        # )
     return "True"
 
-# def upload_file():
-#     if request.method == 'POST':
-#         # check if the post request has the file part
-#         if 'file' not in request.files:
-#             flash('No file part')
-#             return redirect(request.url)
-#         file = request.files['file']
-#         # If the user does not select a file, the browser submits an
-#         # empty file without a filename.
-#         if file.filename == '':
-#             flash('No selected file')
-#             return redirect(request.url)
-#         if file and allowed_file(file.filename):
-#             filename = secure_filename(file.filename)
-#             # file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-#             return redirect(url_for('download_file', name=filename))
-#     return '''
-#     <!doctype html>
-#     <title>Upload new File</title>
-#     <h1>Upload new File</h1>
-#     <form method=post enctype=multipart/form-data>
-#       <input type=file name=file>
-#       <input type=submit value=Upload>
-#     </form>
-#     '''
