@@ -7,7 +7,9 @@ from api import firebase
 
 from inference import Inference
 from schemas import User
-from schemas import Recording
+
+import ast
+
 
 client = pymongo.MongoClient("mongodb+srv://admin:mAsSeYhAcKeZ2096@flow-db.wcavd.mongodb.net/test")
 db = client["flow"]
@@ -75,6 +77,9 @@ def user(username):
 def send_recording():
     recording = request.form.to_dict()
     bytes = recording["recording"]
+
+    if isinstance(bytes, str):
+        bytes = ast.literal_eval(bytes)
 
     classification = inference.predict(bytes)
     path = inference.get_wav(bytes)

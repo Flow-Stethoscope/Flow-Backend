@@ -9,7 +9,7 @@ from create_dataset import process_audio_np, denoise_audio_np
 
 
 class Inference:
-    def __init__(self, sample_rate, model_path=Path("./HeartSounds_BinaryClassification_BLSTM")):
+    def __init__(self, model_path=Path("./HeartSounds_BinaryClassification_BLSTM"), sample_rate=1000):
         self.model = keras.models.load_model(model_path)
         self.sample_rate = sample_rate
 

@@ -45,7 +45,6 @@ def create_model(X_shape, lr):
 
     return model
 
-
 def plot_history(history):
     fig, axes = plt.subplots(nrows=2, ncols=1)
     axes[0].title.set_text("Loss")
@@ -61,11 +60,11 @@ def plot_history(history):
 
 
 if __name__ == "__main__":
-    EPOCHS = 30
+    EPOCHS = 0
     BATCH_SIZE = 2
     LEARNING_RATE = 1e-6
 
-    LOAD_MODEL = "full"  # "full", "weights", or "none"
+    LOAD_MODEL = "weights"  # "full", "weights", or "none"
 
     np_path = Path("./datasets/")
     model_path = Path("./model_saves/") / (
@@ -86,7 +85,7 @@ if __name__ == "__main__":
     # new best: 3515192_epochs_15-batch_size_2-lr_1e-06
     # 3520179_epochs_15-batch_size_2-lr_1e-06
     # 3523832_epochs_15-batch_size_2-lr_1e-06
-    model_weights_save = Path("./model_saves/")
+    model_weights_save = Path("./model_saves/3531223_epochs_30-batch_size_2-lr_1e-06/epoch_17-val_acc_0.82-val_loss_0.42.hdf5")
     model_full_save = Path(
         "./model_saves/3523832_epochs_15-batch_size_2-lr_1e-06/full_save"
     )
