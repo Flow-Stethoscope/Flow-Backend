@@ -33,11 +33,12 @@ class Inference:
         mfccs = process_audio_np(audio, 5)  # 5 second samples
         return np.array(mfccs)
 
-    def get_wav(self, byte_list):
+    def get_wav(self, byte_list, wav_path="./tmp/tmp_recording.wav"):
         audio = np.array(byte_list)
         audio = librosa.resample(audio, self.sample_rate, 1000)
         audio = denoise_audio_np(audio)
-        soundfile.write("./outputs/temp_recording.wav", audio, 1000)
+        soundfile.write(wav_path, audio, 1000)
+        return wav_path
 
 
 if __name__ == "__main__":
