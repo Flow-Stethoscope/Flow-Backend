@@ -120,6 +120,14 @@ def send_recording():
         .inserted_id
     )
     print("rec_id found")
+    db.users.update(
+        {"username": recording["username"]},
+        {
+            "$push": {
+                "recordings": str(db["recordings"].find_one({"_id": rec_id})["_id"])
+            }
+        },
+    )
     db.patients.update(
         {"username": recording["username"]},
         {
