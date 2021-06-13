@@ -143,5 +143,5 @@ def send_recording():
 @app.route("/recordings/<id>", methods=["GET"])
 def recording(id):
     return db["recordings"].find_one(
-        {"_id": id}, {"_id": 1, "url": 1, "classification": 1}
+        {"_id": id}
     )
