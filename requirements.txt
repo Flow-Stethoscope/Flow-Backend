@@ -1,105 +1,159 @@
-absl-py==0.12.0
-aiohttp @ file:///D:/bld/aiohttp_1614281086591/work
-appdirs @ file:///home/conda/feedstock_root/build_artifacts/appdirs_1603108395799/work
-astor @ file:///home/conda/feedstock_root/build_artifacts/astor_1593610464257/work
-astunparse==1.6.3
-async-timeout==3.0.1
-attrs @ file:///home/conda/feedstock_root/build_artifacts/attrs_1620387926260/work
-audioread @ file:///D:/bld/audioread_1607457690506/work
-bcrypt @ file:///D:/bld/bcrypt_1610521335050/work
-blinker==1.4
-brotlipy==0.7.0
-cachetools @ file:///home/conda/feedstock_root/build_artifacts/cachetools_1619593780156/work
-certifi==2021.5.30
-cffi @ file:///D:/bld/cffi_1613414140225/work
-chardet==3.0.4
-click @ file:///D:/bld/click_1621503984716/work
-colorama @ file:///home/conda/feedstock_root/build_artifacts/colorama_1602866480661/work
-contextlib2==0.5.5
-cryptography @ file:///D:/bld/cryptography_1616851649655/work
-cycler==0.10.0
-decorator @ file:///home/conda/feedstock_root/build_artifacts/decorator_1621187651333/work
-dnspython @ file:///home/conda/feedstock_root/build_artifacts/dnspython_1622405147478/work
-Flask @ file:///home/conda/feedstock_root/build_artifacts/flask_1621629915293/work
-flatbuffers==1.12
-gast==0.3.3
-gcloud==0.17.0
-google-auth @ file:///home/conda/feedstock_root/build_artifacts/google-auth_1619638455278/work
-google-auth-oauthlib==0.4.4
-google-pasta==0.2.0
-googleapis-common-protos==1.53.0
-grpcio==1.34.1
-h5py==2.10.0
-httplib2==0.19.1
-idna==2.8
-importlib-metadata @ file:///D:/bld/importlib-metadata_1622775666625/work
-itsdangerous @ file:///home/conda/feedstock_root/build_artifacts/itsdangerous_1621360792037/work
-Jinja2 @ file:///home/conda/feedstock_root/build_artifacts/jinja2_1621419064915/work
-joblib @ file:///home/conda/feedstock_root/build_artifacts/joblib_1612898609989/work
-jws==0.1.3
-Keras-Applications==1.0.8
-keras-nightly==2.5.0.dev2021032900
-Keras-Preprocessing==1.1.2
-kiwisolver @ file:///D:/bld/kiwisolver_1610099948875/work
-librosa @ file:///home/conda/feedstock_root/build_artifacts/librosa_1622025601369/work
-llvmlite==0.36.0
-Markdown==3.3.4
-MarkupSafe @ file:///D:/bld/markupsafe_1621455847127/work
-matplotlib @ file:///D:/bld/matplotlib-suite_1620506206452/work
-mkl-fft==1.3.0
-mkl-random==1.1.1
-mkl-service==2.3.0
-multidict @ file:///D:/bld/multidict_1610319170773/work
-numba @ file:///D:/bld/numba_1616708058017/work
-numpy @ file:///C:/ci/numpy_and_numpy_base_1596215850360/work
-oauth2client==3.0.0
-oauthlib @ file:///home/conda/feedstock_root/build_artifacts/oauthlib_1622563202229/work
-olefile @ file:///home/conda/feedstock_root/build_artifacts/olefile_1602866521163/work
-opt-einsum==3.3.0
-packaging @ file:///home/conda/feedstock_root/build_artifacts/packaging_1612459636436/work
-Pillow @ file:///D:/bld/pillow_1621288193589/work
-pooch @ file:///home/conda/feedstock_root/build_artifacts/pooch_1623218528920/work
-protobuf==3.17.2
-pyasn1==0.4.8
-pyasn1-modules==0.2.7
-pycparser @ file:///home/conda/feedstock_root/build_artifacts/pycparser_1593275161868/work
-pycryptodome==3.4.3
-PyJWT @ file:///home/conda/feedstock_root/build_artifacts/pyjwt_1619620644068/work
-pymongo @ file:///D:/bld/pymongo_1623164507289/work
-pyOpenSSL @ file:///home/conda/feedstock_root/build_artifacts/pyopenssl_1608055815057/work
-pyparsing==2.4.7
-PyQt5==5.12.3
-PyQt5-sip==4.19.18
-PyQtChart==5.12
-PyQtWebEngine==5.12.1
-pyreadline @ file:///D:/bld/pyreadline_1611175364000/work
-Pyrebase==3.0.27
-PySocks @ file:///D:/bld/pysocks_1610291742246/work
-python-dateutil==2.8.1
-python-jwt==2.0.1
-requests==2.22.0
-requests-oauthlib @ file:///home/conda/feedstock_root/build_artifacts/requests-oauthlib_1595492159598/work
-requests-toolbelt==0.7.0
-resampy==0.2.2
-rsa @ file:///home/conda/feedstock_root/build_artifacts/rsa_1614171254180/work
-schema @ file:///home/conda/feedstock_root/build_artifacts/schema_1612181599899/work
-scikit-learn @ file:///D:/bld/scikit-learn_1619628780927/work
-scipy @ file:///C:/bld/scipy_1619562091939/work
-six @ file:///home/conda/feedstock_root/build_artifacts/six_1620240208055/work
-SoundFile @ file:///home/conda/feedstock_root/build_artifacts/pysoundfile_1607011569782/work
-tensorboard==2.5.0
-tensorboard-data-server @ file:///D:/bld/tensorboard-data-server_1622835157283/work/tensorboard_data_server-0.6.0-py3-none-any.whl
-tensorboard-plugin-wit @ file:///home/conda/feedstock_root/build_artifacts/tensorboard-plugin-wit_1611075653546/work/tensorboard_plugin_wit-1.8.0-py3-none-any.whl
-tensorflow==2.3.0
-tensorflow-estimator @ file:///home/conda/feedstock_root/build_artifacts/tensorflow-estimator_1610655765755/work/tensorflow_estimator-2.4.0-py2.py3-none-any.whl
-termcolor==1.1.0
-threadpoolctl @ file:///tmp/tmp79xdzxkt/threadpoolctl-2.1.0-py3-none-any.whl
-tornado @ file:///D:/bld/tornado_1610094858390/work
-typing-extensions==3.7.4.3
-urllib3 @ file:///tmp/build/80754af9/urllib3_1603305693037/work
-Werkzeug @ file:///home/conda/feedstock_root/build_artifacts/werkzeug_1621518206714/work
-win-inet-pton @ file:///D:/bld/win_inet_pton_1610147566231/work
-wincertstore==0.2
-wrapt==1.12.1
-yarl @ file:///D:/bld/yarl_1610354399983/work
-zipp @ file:///home/conda/feedstock_root/build_artifacts/zipp_1614945704755/work
+_tflow_select=2.3.0=eigen
+absl-py=0.12.0=pyhd8ed1ab_0
+aiohttp=3.7.4=py38h294d835_0
+appdirs=1.4.4=pyh9f0ad1d_0
+astor=0.8.1=pyh9f0ad1d_0
+astunparse=1.6.3=pyhd8ed1ab_0
+async-timeout=3.0.1=py_1000
+attrs=21.2.0=pyhd8ed1ab_0
+audioread=2.1.9=py38haa244fe_0
+bcrypt=3.2.0=py38h294d835_1
+blas=1.0=mkl
+blinker=1.4=py_1
+brotlipy=0.7.0=py38h294d835_1001
+ca-certificates=2021.5.25=haa95532_1
+cachetools=4.2.2=pyhd8ed1ab_0
+certifi=2021.5.30=py38haa95532_0
+cffi=1.14.5=py38hd8c33c5_0
+chardet=3.0.4=py38_1003
+click=8.0.1=py38haa244fe_0
+colorama=0.4.4=pyh9f0ad1d_0
+contextlib2=0.5.5=py_2
+cryptography=3.4.7=py38hd7da0ea_0
+cycler=0.10.0=py_2
+dataclasses=0.8=pyhc8e2a94_1
+decorator=5.0.9=pyhd8ed1ab_0
+dnspython=2.1.0=pyhd8ed1ab_0
+flask=2.0.1=pyhd8ed1ab_0
+freetype=2.10.4=h546665d_1
+gast=0.4.0=pyh9f0ad1d_0
+gcloud=0.17.0=pypi_0
+google-auth=1.30.0=pyh44b312d_0
+google-auth-oauthlib=0.4.1=py_2
+google-pasta=0.2.0=pyh8c360ce_0
+googleapis-common-protos=1.53.0=pypi_0
+grpcio=1.38.0=py38he5377a8_0
+h5py=2.10.0=nompi_py38he6c2248_106
+hdf5=1.10.6=nompi_h5268f04_1114
+httplib2=0.19.1=pypi_0
+icu=68.1=h0e60522_0
+idna=2.8=py38_1000
+importlib-metadata=4.5.0=py38haa244fe_0
+intel-openmp=2021.2.0=h57928b3_616
+itsdangerous=2.0.1=pyhd8ed1ab_0
+jbig=2.1=h8d14728_2003
+jinja2=3.0.1=pyhd8ed1ab_0
+joblib=1.0.1=pyhd8ed1ab_0
+jpeg=9d=h8ffe710_0
+jws=0.1.3=pypi_0
+keras-applications=1.0.8=py_1
+keras-preprocessing=1.1.2=pyhd8ed1ab_0
+kiwisolver=1.3.1=py38hbd9d945_1
+krb5=1.19.1=hbae68bd_0
+lcms2=2.12=h2a16943_0
+lerc=2.2.1=h0e60522_0
+libblas=3.9.0=8_mkl
+libcblas=3.9.0=8_mkl
+libclang=11.1.0=default_h5c34c98_1
+libcurl=7.77.0=h789b8ee_0
+libdeflate=1.7=h8ffe710_5
+libflac=1.3.3=h0e60522_1
+liblapack=3.9.0=8_mkl
+libogg=1.3.4=h8ffe710_1
+libopus=1.3.1=h8ffe710_1
+libpng=1.6.37=h1d00b33_2
+libprotobuf=3.17.2=h7755175_0
+librosa=0.8.1=pyhd8ed1ab_0
+libsndfile=1.0.31=h0e60522_1
+libssh2=1.9.0=h680486a_6
+libtiff=4.3.0=h0c97f57_1
+libvorbis=1.3.7=h0e60522_0
+llvmlite=0.36.0=py38h57a6900_0
+lz4-c=1.9.3=h8ffe710_0
+m2w64-gcc-libgfortran=5.3.0=6
+m2w64-gcc-libs=5.3.0=7
+m2w64-gcc-libs-core=5.3.0=7
+m2w64-gmp=6.1.0=2
+m2w64-libwinpthread-git=5.0.0.4634.697f757=2
+markdown=3.3.4=pyhd8ed1ab_0
+markupsafe=2.0.1=py38h294d835_0
+matplotlib=3.4.2=py38haa244fe_0
+matplotlib-base=3.4.2=py38heae8d8c_0
+mkl=2020.4=hb70f87d_311
+mkl-service=2.3.0=py38h196d8e1_0
+mkl_fft=1.3.0=py38h46781fe_0
+mkl_random=1.1.1=py38h47e9c7a_0
+msys2-conda-epoch=20160418=1
+multidict=5.1.0=py38h294d835_1
+numba=0.53.1=py38hd0eb412_0
+numpy=1.19.1=py38h5510c5b_0
+numpy-base=1.19.1=py38ha3acd2a_0
+oauth2client=3.0.0=pypi_0
+oauthlib=3.1.1=pyhd8ed1ab_0
+olefile=0.46=pyh9f0ad1d_1
+openjpeg=2.4.0=hb211442_1
+openssl=1.1.1k=h2bbff1b_0
+opt_einsum=3.3.0=pyhd8ed1ab_1
+packaging=20.9=pyh44b312d_0
+pillow=8.2.0=py38h9273828_1
+pip=21.1.2=py38haa95532_0
+pooch=1.4.0=pyhd8ed1ab_0
+protobuf=3.17.2=py38h885f38d_0
+pyasn1=0.4.8=py_0
+pyasn1-modules=0.2.7=py_0
+pycparser=2.20=pyh9f0ad1d_2
+pycryptodome=3.4.3=pypi_0
+pyjwt=2.1.0=pyhd8ed1ab_0
+pymongo=3.11.4=py38h885f38d_0
+pyopenssl=20.0.1=pyhd8ed1ab_0
+pyparsing=2.4.7=pyh9f0ad1d_0
+pyqt=5.12.3=py38haa244fe_7
+pyqt-impl=5.12.3=py38h885f38d_7
+pyqt5-sip=4.19.18=py38h885f38d_7
+pyqtchart=5.12=py38h885f38d_7
+pyqtwebengine=5.12.1=py38h885f38d_7
+pyreadline=2.1=py38haa244fe_1003
+pyrebase=3.0.27=pypi_0
+pysocks=1.7.1=py38haa244fe_3
+pysoundfile=0.10.3.post1=pyhd3deb0d_0
+python=3.8.10=hdbf39b2_7
+python-dateutil=2.8.1=py_0
+python-jwt=2.0.1=pypi_0
+python_abi=3.8=1_cp38
+qt=5.12.9=h5909a2a_4
+requests=2.11.1=pypi_0
+requests-oauthlib=1.3.0=pyh9f0ad1d_0
+requests-toolbelt=0.7.0=pypi_0
+resampy=0.2.2=py_0
+rsa=4.7.2=pyh44b312d_0
+schema=0.7.4=pyh44b312d_0
+scikit-learn=0.24.2=py38h5d5d464_0
+scipy=1.6.3=py38he847743_0
+setuptools=52.0.0=py38haa95532_0
+six=1.16.0=pyh6c4a22f_0
+sqlite=3.35.4=h2bbff1b_0
+tensorboard=2.5.0=pyhd8ed1ab_0
+tensorboard-data-server=0.6.0=py38haa244fe_0
+tensorboard-plugin-wit=1.8.0=pyh44b312d_0
+tensorflow=2.3.0=mkl_py38h8c0d9a2_0
+tensorflow-base=2.3.0=eigen_py38h75a453f_0
+tensorflow-estimator=2.4.0=pyh9656e83_0
+termcolor=1.1.0=py_2
+threadpoolctl=2.1.0=pyh5ca1d4c_0
+tk=8.6.10=h8ffe710_1
+tornado=6.1=py38h294d835_1
+typing-extensions=3.10.0.0=hd8ed1ab_0
+typing_extensions=3.10.0.0=pyha770c72_0
+urllib3=1.25.11=py_0
+vc=14.2=h21ff451_1
+vs2015_runtime=14.27.29016=h5e58377_2
+werkzeug=2.0.1=pyhd8ed1ab_0
+wheel=0.36.2=pyhd3eb1b0_0
+win_inet_pton=1.1.0=py38haa244fe_2
+wincertstore=0.2=py38_0
+wrapt=1.12.1=py38h294d835_3
+xz=5.2.5=h62dcd97_1
+yarl=1.6.3=py38h294d835_1
+zipp=3.4.1=pyhd8ed1ab_0
+zlib=1.2.11=h62dcd97_1010
+zstd=1.5.0=h6255e5f_0
