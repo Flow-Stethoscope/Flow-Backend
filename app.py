@@ -87,37 +87,49 @@ def user(username):
 @app.route("/send_recording", methods=["POST"])
 def send_recording():
     recording = request.form.to_dict()
+
+    print("recording from route:", recording)
+
     bytes = recording["recording"]
 
     if isinstance(bytes, str):
+        print("converting")
         bytes = ast.literal_eval(bytes)
+    if isinstance(bytes, int):
+        bytes = [bytes]
+
+    bytes = [float(byte) for byte in bytes]
+
+    print("bytes type", type(bytes))
+    print("bytes", bytes)
 
     classification = inference.predict(bytes)
-    path = inference.get_wav(bytes)
-    url = firebase.uploadFile(path)
-    inference.delete_wav(path)
-    # if Recording.recording.is_valid(recording):
-    if True:
-        rec_id = (
-            db["recordings"]
-            .insert_one(
-                {
-                    "url": url,
-                    "username": recording["username"],
-                    "classification": classification,
-                }
-            )
-            .inserted_id
-        )
-        db.patients.update(
-            {"username": recording["username"]},
+    # path = inference.get_wav(bytes)
+    # url = firebase.uploadFile(path)
+    # inference.delete_wav(path)
+    print("deleted file")
+    rec_id = (
+        db["recordings"]
+        .insert_one(
             {
-                "$push": {
-                    "recordings": db["recordings"].find_one({"_id": rec_id})["_id"]
-                }
-            },
+                "url": "no mask L",
+                "username": recording["username"],
+                "classification": classification,
+            }
         )
-    return {"recording_id": rec_id}
+        .inserted_id
+    )
+    print("rec_id found")
+    db.patients.update(
+        {"username": recording["username"]},
+        {
+            "$push": {
+                "recordings": str(db["recordings"].find_one({"_id": rec_id})["_id"])
+            }
+        },
+    )
+    print("db updated")
+    return {"recording_id": str(rec_id)}
 
 
 @app.route("/recordings/<id>", methods=["GET"])

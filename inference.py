@@ -16,6 +16,9 @@ class Inference:
         self.model.summary()
 
     def predict(self, byte_list, threshold=0.05):
+        if len(byte_list) / self.sample_rate < 5:
+            return "unsure"
+
         x = self.preprocess(byte_list)
 
         pred = self.model.predict_on_batch(x)
@@ -33,13 +36,13 @@ class Inference:
         mfccs = process_audio_np(audio, 5)  # 5 second samples
         return np.array(mfccs)
 
-    def get_wav(self, byte_list, wav_path="./tmp/tmp_recording.wav"):
+    def get_wav(self, byte_list, wav_path=Path("./tmp/tmp_recording.wav")):
         audio = np.array(byte_list)
         audio = librosa.resample(audio, self.sample_rate, 1000)
         soundfile.write(wav_path, audio, 1000)
         return wav_path
 
-    def delete_wav(self, wav_path="./tmp/tmp_recording.wav"):
+    def delete_wav(self, wav_path=Path("./tmp/tmp_recording.wav")):
         wav_path = Path(wav_path)
         wav_path.unlink(missing_ok=True)
 
