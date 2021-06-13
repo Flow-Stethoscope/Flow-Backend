@@ -124,7 +124,7 @@ def send_recording():
         {"username": recording["username"]},
         {
             "$push": {
-                "recordings": str(db["recordings"].find_one({"_id": rec_id})["_id"])
+                "recordings": str(db["recordings"].find_one({"_id": rec_id}))
             }
         },
     )
@@ -132,16 +132,10 @@ def send_recording():
         {"username": recording["username"]},
         {
             "$push": {
-                "recordings": str(db["recordings"].find_one({"_id": rec_id})["_id"])
+                "recordings": str(db["recordings"].find_one({"_id": rec_id}))
             }
         },
     )
     print("db updated")
     return {"recording_id": str(rec_id)}
 
-
-@app.route("/recordings/<id>", methods=["GET"])
-def recording(id):
-    recording_info = db["recordings"].find_one({"_id": id})
-    print(recording_info)
-    return json.loads(json.dumps(recording_info))
