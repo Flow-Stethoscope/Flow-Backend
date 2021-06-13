@@ -1,3 +1,6 @@
+import os
+os.system("sudo apt-get install libsndfile1")
+
 import json
 
 import pymongo
