@@ -107,3 +107,11 @@ def send_recording():
         )
     return "True"
 
+
+@app.route('/recordings/<id>', methods=['GET'])
+def recording(id):
+    return db["recordings"].find_one(
+        {
+            "_id": id
+        }
+    )
