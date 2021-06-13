@@ -142,6 +142,6 @@ def send_recording():
 
 @app.route("/recordings/<id>", methods=["GET"])
 def recording(id):
-    return json.loads(json.dumps(db["recordings"].find_one(
-        {"_id": id}
-    )))
+    recording_info = db["recordings"].find_one({"_id": id})
+    print(recording_info)
+    return json.loads(json.dumps(recording_info))
